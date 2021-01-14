@@ -1,0 +1,3 @@
+[submodule "BigEndianTool"]
+	path = BigEndianTool
+	url = https://github.com/darkautism/BigEndianTool.git
