@@ -22,19 +22,13 @@ namespace TrophyParser.Vita
             _tans = new TRPTRANS(path, _trop.Count);
             Count = _trop.Count;
             _trophies = new List<Trophy>();
-            foreach (var trophy in _trophies)
-            {
-                trophy.TrophyInfo = _ttitle[trophy.Id];
-                _trophies.Add(trophy);
-            }
-            /*
             for (int i = 0; i < Count; ++i)
             {
                 var trophy = _trop[i];
                 trophy = _trop[i];
                 trophy.TrophyInfo = _ttitle[i];
                 _trophies.Add(trophy);
-            }*/
+            }
         }
         public void UnlockTrophy(int id, DateTime time)
         {
@@ -46,6 +40,7 @@ namespace TrophyParser.Vita
         {
             _tans.LockTropy(id);
             _ttitle.PopTrophy(id);
+
         }
         public void LockTrophy(Trophy trophy) => LockTrophy(trophy.Id);
         public void ChangeTime(int id, DateTime time)

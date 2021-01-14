@@ -15,7 +15,7 @@ namespace TrophyParser.PS3
         private SFMParse _tconf;
         private TROPTRNS _tpsn;
         private TROPUSR _tusr;
-        
+
         public Trophy this[int id] => _trophies[id];
         public int Count { get; }
 
@@ -31,13 +31,12 @@ namespace TrophyParser.PS3
             {
                 var trophy = _tconf[i];
                 var trophyInfo = _tpsn[i];
-                if (trophyInfo.HasValue) trophy.TrophyInfo = new TrophyInfo{ Time = trophyInfo.Value.Time, IsSync = trophyInfo.Value.IsSync};
-                else trophy.TrophyInfo = new TrophyInfo { Time = null, IsSync = false};
+                if (trophyInfo.HasValue) trophy.TrophyInfo = new TrophyInfo { Time = trophyInfo.Value.Time, IsSync = trophyInfo.Value.IsSync };
+                else trophy.TrophyInfo = new TrophyInfo { Time = null, IsSync = false };
                 _trophies.Add(trophy);
             }
-          
-        }
 
+        }
         
         public void UnlockTrophy(int id, DateTime time)
         {
@@ -53,7 +52,8 @@ namespace TrophyParser.PS3
         {
             _tusr.LockTrophy(id);
             _tpsn.DeleteTrophyByID(id);
-            _trophies[id].TrophyInfo = null;
+            _trophies[id].TrophyInfo.Time = null;
+            //_trophies[id].TrophyInfo = null;
         }
 
         public void LockTrophy(Trophy trophy) => LockTrophy(trophy.Id);
