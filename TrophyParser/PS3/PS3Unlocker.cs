@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using TrophyParser.Models;
@@ -30,13 +31,32 @@ namespace TrophyParser.PS3
             {
                 var trophy = _tconf[i];
                 var trophyInfo = _tpsn[i];
-                if (trophyInfo.HasValue)
-                    trophy.TrophyInfo = new TrophyInfo{ Time = trophyInfo.Value.Time, IsSync = trophyInfo.Value.IsSync, IsUnlock = true};
+                if (trophyInfo.HasValue) trophy.TrophyInfo = new TrophyInfo{ Time = trophyInfo.Value.Time, IsSync = trophyInfo.Value.IsSync};
+                else trophy.TrophyInfo = new TrophyInfo { Time = null, IsSync = false};
                 _trophies.Add(trophy);
             }
           
         }
 
+        
+        public void UnlockTrophy(int id, DateTime time)
+        {
+            _tusr.UnlockTrophy(id, time);
+            _tpsn.PutTrophy(id, _tusr.trophyTypeTable[id].Type, time);
+            _trophies[id].TrophyInfo = new TrophyInfo { Time = time, IsSync = false};
+
+        }
+
+        public void UnlockTrophy(Trophy trophy, DateTime time) => UnlockTrophy(trophy.Id, time);
+
+        public void LockTrophy(int id)
+        {
+            _tusr.LockTrophy(id);
+            _tpsn.DeleteTrophyByID(id);
+            _trophies[id].TrophyInfo = null;
+        }
+
+        public void LockTrophy(Trophy trophy) => LockTrophy(trophy.Id);
         public void ChangeTime(int id, DateTime time)
         {
             _tpsn.ChangeTime(id, time);
@@ -45,22 +65,7 @@ namespace TrophyParser.PS3
             _tusr.trophyTimeInfoTable[id] = tti;
             _trophies[id].TrophyInfo.Time = time;
         }
-        public void UnlockTrophy(int id, DateTime time)
-        {
-            _tusr.UnlockTrophy(id, time);
-            _tpsn.PutTrophy(id, _tusr.trophyTypeTable[id].Type, time);
-            _trophies[id].TrophyInfo = new TrophyInfo { Time = time, IsSync = false, IsUnlock = true };
-
-        }
-        
-        public void LockTrophy(int id)
-        {
-            _tusr.LockTrophy(id);
-            _tpsn.DeleteTrophyByID(id);
-            _trophies[id].TrophyInfo = null;
-            //throw new NotImplementedException();
-        }
-
+        public void ChangeTime(Trophy trophy, DateTime time) => ChangeTime(trophy.Id, time);
         public void Save()
         {
             _tpsn.Save();
@@ -68,6 +73,8 @@ namespace TrophyParser.PS3
             //TODO: Encrypt
         }
 
+        public IEnumerator<Trophy> GetEnumerator() => _trophies.GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         public override string ToString()
         {
             var sb = new StringBuilder();

@@ -5,9 +5,9 @@ namespace TrophyParser.Models
 {
     public class TrophyInfo
     {
-        public bool IsUnlock;
+        public bool IsUnlock { get => Time.HasValue; }
         public byte Unknown;
-        public DateTime Time;
+        public DateTime? Time = null;
         public byte Type;
         public bool IsSync;
 

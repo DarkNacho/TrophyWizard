@@ -56,7 +56,6 @@ namespace TrophyParser.Vita
                 ulong t = BitConverter.ToUInt64(time);
                 _trophies.Add( new TrophyInfo
                 {
-                    IsUnlock =  block[0]==0x01,
                     Time = new DateTime().AddMilliseconds(t/1000),
                     Unknown = block[3]
                     
@@ -70,14 +69,14 @@ namespace TrophyParser.Vita
         {
             _trophies[id].Time = time;
             _trophies[id].Unknown = 0x50;
-            _trophies[id].IsUnlock = true;
             //TODO: Change Progress
         }
 
         public void PopTrophy(int id)
         {
-            _trophies[id].IsUnlock = false;
-            //TODO: set time to 0 
+            if (_trophies[id].IsSync) throw new Exception("Can't delete sync trophies");
+            _trophies[id].Time = null;
+            _trophies[id].Type = 0;
             //TODO: Change Progress
         }
         public void ChangeTime(int id, DateTime time) => _trophies[id].Time = time;
@@ -91,7 +90,7 @@ namespace TrophyParser.Vita
                 var  data = new List<byte>();
                 data.Add((byte) (trophy.IsUnlock ? 0x01 : 0x00));
                 data.AddRange(new byte[]{0,0,trophy.Unknown, 0, 0, 0, 0, 0 });
-                var time = BitConverter.GetBytes(trophy.Time.Ticks/10);
+                var time = trophy.Time.HasValue ? BitConverter.GetBytes(trophy.Time.Value.Ticks / 10) : BitConverter.GetBytes((long)0);
                 Array.Reverse(time);
                 data.AddRange(time);
                 data.AddRange(new byte[]{0,0,0,0,0,0,0,0});

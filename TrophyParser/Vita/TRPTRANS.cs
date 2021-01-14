@@ -37,7 +37,6 @@ namespace TrophyParser.Vita
                 ulong t = BitConverter.ToUInt64(time);
                 _trophies.Add(new TrophyInfo
                 {
-                    IsUnlock = block[0] == 0x02,
                     Time = new DateTime().AddMilliseconds(t / 1000),
                     Unknown = block[35]
                 });
@@ -61,16 +60,14 @@ namespace TrophyParser.Vita
             _trophies[id].Type = GetTrophyType(type);
             _trophies[id].Time = time;
             _trophies[id].Unknown = 0x50;
-            _trophies[id].IsUnlock = true;
             //TODO: Change Progress
         }
         public void ChangeTime(int id, DateTime time) => _trophies[id].Time = time;
 
         public void LockTropy(int id)
         {
-            _trophies[id].IsUnlock = false;
             _trophies[id].Type = 0x00;
-            //TODO: set time to 0
+            _trophies[id].Time = null;
             //TODO: Change Progress
         }
 
@@ -82,7 +79,7 @@ namespace TrophyParser.Vita
             {
                 
                 _writer.Write((byte) (trophy.IsUnlock ? 0x02 : 0x00));
-                var time = BitConverter.GetBytes(trophy.Time.Ticks/10);
+                var time = trophy.Time.HasValue ? BitConverter.GetBytes(trophy.Time.Value.Ticks/10) : BitConverter.GetBytes((long)0);
                 Array.Reverse(time);
                 _writer.BaseStream.Position += 31;
                 _writer.Write(trophy.Type);

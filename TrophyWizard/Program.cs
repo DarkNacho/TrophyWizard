@@ -10,10 +10,10 @@ namespace TrophyWizard
         static void Main(string[] args)
         {
             var dir = args[0];//"C:\\Users\\Dark Nacho\\Downloads\\trophies\\dec\\NPWR00404_00\\";
-            IUnlocker unlocker = new PS3Unlocker(dir);
-            //if (args[0].Equals("PS3")) unlocker = new PS3Unlocker(args[1]);
-            //else if (args[0].Equals("Vita")) unlocker = new VitaUnlocker(args[1]);
-            //else throw new Exception("Bad Console");
+            IUnlocker unlocker; //new PS3Unlocker(dir);
+            if (args[0].Equals("PS3")) unlocker = new PS3Unlocker(args[1]);
+            else if (args[0].Equals("Vita")) unlocker = new VitaUnlocker(args[1]);
+            else throw new Exception("Bad Console");
 
             Console.WriteLine(unlocker.ToString());
             Console.WriteLine("Select Trophy: ");
@@ -22,15 +22,14 @@ namespace TrophyWizard
             {
             
                 var trophy = unlocker[cmd];
-                if(trophy.TrophyInfo == null)
+                if(trophy.TrophyInfo.Time.HasValue)
                 {
                     Console.WriteLine("Do you want to unlock it  (Y / N)?");
                     var yn = Console.ReadLine();
                     if(yn[0] == 'Y')
                     {
                         Console.WriteLine("When was unlock it? ");
-                        var t = DateTime.Parse(Console.ReadLine());
-                        unlocker.UnlockTrophy(trophy.Id, t);
+                        unlocker.UnlockTrophy(trophy.Id, DateTime.Parse(Console.ReadLine()));
                     }
                 }
                 else
@@ -41,8 +40,7 @@ namespace TrophyWizard
                     else
                     {
                         Console.WriteLine("New time:");
-                        var t = DateTime.Parse(Console.ReadLine());
-                        unlocker.ChangeTime(trophy.Id, t);
+                        unlocker.ChangeTime(trophy.Id, DateTime.Parse(Console.ReadLine()));
                     }
                 }
 
