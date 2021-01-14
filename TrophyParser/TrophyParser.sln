@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrophyParser", "TrophyParser.csproj", "{560A544A-9543-4F1E-BE2C-6CA4ED3523D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigEndianTool", "..\BigEndianTool-d58df06bb1b0ab8ae14cadc0168586fe6a65c94a\BigEndianTool\BigEndianTool.csproj", "{A57CEE20-8097-467B-9F57-099BB34FBF2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{560A544A-9543-4F1E-BE2C-6CA4ED3523D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{560A544A-9543-4F1E-BE2C-6CA4ED3523D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{560A544A-9543-4F1E-BE2C-6CA4ED3523D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{560A544A-9543-4F1E-BE2C-6CA4ED3523D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A57CEE20-8097-467B-9F57-099BB34FBF2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A57CEE20-8097-467B-9F57-099BB34FBF2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A57CEE20-8097-467B-9F57-099BB34FBF2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A57CEE20-8097-467B-9F57-099BB34FBF2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
