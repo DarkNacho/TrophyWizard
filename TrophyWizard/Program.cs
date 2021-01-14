@@ -9,10 +9,10 @@ namespace TrophyWizard
     {
         static void Main(string[] args)
         {
-            var dir = args[0];//"C:\\Users\\Dark Nacho\\Downloads\\trophies\\dec\\NPWR00404_00\\";
+            var dir = args[1];//"C:\\Users\\Dark Nacho\\Downloads\\trophies\\dec\\NPWR00404_00\\";
             IUnlocker unlocker; //new PS3Unlocker(dir);
-            if (args[0].Equals("PS3")) unlocker = new PS3Unlocker(args[1]);
-            else if (args[0].Equals("Vita")) unlocker = new VitaUnlocker(args[1]);
+            if (args[0].Equals("PS3")) unlocker = new PS3Unlocker(args[0]);
+            else if (args[0].Equals("Vita")) unlocker = new VitaUnlocker(args[0]);
             else throw new Exception("Bad Console");
 
             Console.WriteLine(unlocker.ToString());
