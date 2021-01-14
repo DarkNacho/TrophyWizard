@@ -9,11 +9,11 @@ namespace TrophyWizard
     {
         static void Main(string[] args)
         {
-            var dir = args[1];
-            IUnlocker unlocker = new PS3Unlocker(dir);
-            if (args[0].Equals("PS3")) unlocker = new PS3Unlocker(args[0]);
-            else if (args[0].Equals("Vita")) unlocker = new VitaUnlocker(args[0]);
-            else throw new Exception("Bad Console");
+            //var dir = args[1];
+            IUnlocker unlocker = new VitaUnlocker(@"C:\Users\Dark Nacho\Downloads\trophies\dec\nacho decrypt\NPWR20047_00");
+            //if (args[0].Equals("PS3")) unlocker = new PS3Unlocker(args[0]);
+            //else if (args[0].Equals("Vita")) unlocker = new VitaUnlocker(args[0]);
+            //else throw new Exception("Bad Console");
             
 
             Console.WriteLine(unlocker.ToString());
@@ -23,7 +23,7 @@ namespace TrophyWizard
             {
             
                 var trophy = unlocker[cmd];
-                if(!trophy.TrophyInfo.Time.HasValue)
+                if(!trophy.TrophyInfo.IsUnlock)
                 {
                     Console.WriteLine("Do you want to unlock it  (Y / N)?");
                     var yn = Console.ReadLine();

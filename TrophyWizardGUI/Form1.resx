@@ -57,19 +57,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
+  <assembly alias="System.Private.CoreLib" name="System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e" />
   <data name="linkLabel1.AutoSize" type="System.Boolean, System.Private.CoreLib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="linkLabel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
-  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Drawing.Primitives" name="System.Drawing.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="linkLabel1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 565</value>
   </data>
-  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <assembly alias="System.Windows.Forms.Primitives" name="System.Windows.Forms.Primitives, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="linkLabel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="linkLabel1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -85,7 +86,7 @@
     <value>linkLabel1</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;linkLabel1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -135,42 +136,6 @@
   <data name="檔案ToolStripMenuItem.Text" xml:space="preserve">
     <value>File(&amp;F)</value>
   </data>
-  <data name="瞬間白金ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>246, 22</value>
-  </data>
-  <data name="瞬間白金ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Instant Platinum</value>
-  </data>
-  <data name="清除獎杯ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>246, 22</value>
-  </data>
-  <data name="清除獎杯ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Clear the unsynchronized trophy</value>
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>246, 22</value>
-  </data>
-  <data name="toolStripMenuItem1.Text" xml:space="preserve">
-    <value>Clopy From</value>
-  </data>
-  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>243, 6</value>
-  </data>
-  <data name="setRandomStartTimeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>246, 22</value>
-  </data>
-  <data name="setRandomStartTimeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Set random start time</value>
-  </data>
-  <data name="setRandomEndTimeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>246, 22</value>
-  </data>
-  <data name="setRandomEndTimeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Set Random end time</value>
-  </data>
-  <data name="setRandomEndTimeToolStripMenuItem.Visible" type="System.Boolean, System.Private.CoreLib">
-    <value>False</value>
-  </data>
   <data name="進階ToolStripMenuItem.Enabled" type="System.Boolean, System.Private.CoreLib">
     <value>False</value>
   </data>
@@ -192,18 +157,6 @@
   <data name="toolStripComboBox2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
     <value>140, 23</value>
   </data>
-  <data name="toolStripComboBox1.Items" xml:space="preserve">
-    <value>中文</value>
-  </data>
-  <data name="toolStripComboBox1.Items1" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="toolStripComboBox1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
-    <value>140, 23</value>
-  </data>
-  <data name="toolStripComboBox1.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
   <data name="consoleComboBoxSelection.Items" xml:space="preserve">
     <value>PS3</value>
   </data>
@@ -216,7 +169,7 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 0</value>
   </data>
-  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>7, 2, 0, 2</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -232,7 +185,7 @@
     <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -243,14 +196,14 @@
   <data name="dateTimePicker1.CustomFormat" xml:space="preserve">
     <value>yyyy/M/dd  HH:mm:ss</value>
   </data>
-  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
+  <assembly alias="System.Drawing.Common" name="System.Drawing.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51" />
   <data name="dateTimePicker1.Font" type="System.Drawing.Font, System.Drawing.Common">
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>660, 48</value>
   </data>
-  <data name="dateTimePicker1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="dateTimePicker1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -266,7 +219,7 @@
     <value>dateTimePicker1</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -281,9 +234,9 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>625, 8</value>
+    <value>599, 8</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -302,7 +255,7 @@
     <value>label1</value>
   </data>
   <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -314,9 +267,9 @@
     <value>Top, Right</value>
   </data>
   <data name="progressBar1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>901, 0</value>
+    <value>875, 0</value>
   </data>
-  <data name="progressBar1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="progressBar1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="progressBar1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -329,7 +282,7 @@
     <value>progressBar1</value>
   </data>
   <data name="&gt;&gt;progressBar1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;progressBar1.Parent" xml:space="preserve">
     <value>$this</value>
@@ -344,9 +297,9 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>739, 8</value>
+    <value>713, 8</value>
   </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -362,7 +315,7 @@
     <value>label2</value>
   </data>
   <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -377,9 +330,9 @@
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>783, 8</value>
+    <value>757, 8</value>
   </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -395,7 +348,7 @@
     <value>label3</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>$this</value>
@@ -410,9 +363,9 @@
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing.Primitives">
-    <value>845, 8</value>
+    <value>819, 8</value>
   </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 0, 4, 0</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -428,7 +381,7 @@
     <value>label4</value>
   </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>$this</value>
@@ -481,7 +434,7 @@
   <data name="listViewEx1.Location" type="System.Drawing.Point, System.Drawing.Primitives">
     <value>0, 27</value>
   </data>
-  <data name="listViewEx1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="listViewEx1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="listViewEx1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
@@ -502,10 +455,46 @@
   <data name="&gt;&gt;listViewEx1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <data name="瞬間白金ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>246, 22</value>
+  </data>
+  <data name="瞬間白金ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Instant Platinum</value>
+  </data>
+  <data name="清除獎杯ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>246, 22</value>
+  </data>
+  <data name="清除獎杯ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Clear the unsynchronized trophy</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>246, 22</value>
+  </data>
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>Clopy From</value>
+  </data>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>243, 6</value>
+  </data>
+  <data name="setRandomStartTimeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>246, 22</value>
+  </data>
+  <data name="setRandomStartTimeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Set random start time</value>
+  </data>
+  <data name="setRandomEndTimeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing.Primitives">
+    <value>246, 22</value>
+  </data>
+  <data name="setRandomEndTimeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Set Random end time</value>
+  </data>
+  <data name="setRandomEndTimeToolStripMenuItem.Visible" type="System.Boolean, System.Private.CoreLib">
+    <value>False</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>True</value>
   </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+  <metadata name="$this.TrayHeight" type="System.Int32, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>50</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing.Primitives">
@@ -2655,7 +2644,7 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
 </value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms.Primitives">
     <value>4, 3, 4, 3</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
@@ -2665,168 +2654,162 @@
     <value>imageList1</value>
   </data>
   <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;檔案ToolStripMenuItem.Name" xml:space="preserve">
     <value>檔案ToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;檔案ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;開啟ToolStripMenuItem.Name" xml:space="preserve">
     <value>開啟ToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;開啟ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;存檔ToolStripMenuItem.Name" xml:space="preserve">
     <value>存檔ToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;存檔ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;關閉檔案CToolStripMenuItem.Name" xml:space="preserve">
     <value>關閉檔案CToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;關閉檔案CToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;關閉ToolStripMenuItem.Name" xml:space="preserve">
     <value>關閉ToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;關閉ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;進階ToolStripMenuItem.Name" xml:space="preserve">
     <value>進階ToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;進階ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;瞬間白金ToolStripMenuItem.Name" xml:space="preserve">
-    <value>瞬間白金ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;瞬間白金ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;清除獎杯ToolStripMenuItem.Name" xml:space="preserve">
-    <value>清除獎杯ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;清除獎杯ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
-    <value>toolStripSeparator2</value>
-  </data>
-  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;setRandomStartTimeToolStripMenuItem.Name" xml:space="preserve">
-    <value>setRandomStartTimeToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;setRandomStartTimeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;setRandomEndTimeToolStripMenuItem.Name" xml:space="preserve">
-    <value>setRandomEndTimeToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;setRandomEndTimeToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;重新整理ToolStripMenuItem.Name" xml:space="preserve">
     <value>重新整理ToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;重新整理ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripComboBox2.Name" xml:space="preserve">
     <value>toolStripComboBox2</value>
   </data>
   <data name="&gt;&gt;toolStripComboBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripComboBox1.Name" xml:space="preserve">
-    <value>toolStripComboBox1</value>
-  </data>
-  <data name="&gt;&gt;toolStripComboBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;consoleComboBoxSelection.Name" xml:space="preserve">
     <value>consoleComboBoxSelection</value>
   </data>
   <data name="&gt;&gt;consoleComboBoxSelection.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ToolStripComboBox, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Name" xml:space="preserve">
     <value>folderBrowserDialog1</value>
   </data>
   <data name="&gt;&gt;folderBrowserDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
     <value>columnHeader1</value>
   </data>
   <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
     <value>columnHeader2</value>
   </data>
   <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
     <value>columnHeader3</value>
   </data>
   <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
     <value>columnHeader4</value>
   </data>
   <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
     <value>columnHeader5</value>
   </data>
   <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader7.Name" xml:space="preserve">
     <value>columnHeader7</value>
   </data>
   <data name="&gt;&gt;columnHeader7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader6.Name" xml:space="preserve">
     <value>columnHeader6</value>
   </data>
   <data name="&gt;&gt;columnHeader6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;columnHeader8.Name" xml:space="preserve">
     <value>columnHeader8</value>
   </data>
   <data name="&gt;&gt;columnHeader8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;瞬間白金ToolStripMenuItem.Name" xml:space="preserve">
+    <value>瞬間白金ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;瞬間白金ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;清除獎杯ToolStripMenuItem.Name" xml:space="preserve">
+    <value>清除獎杯ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;清除獎杯ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Name" xml:space="preserve">
+    <value>toolStripSeparator2</value>
+  </data>
+  <data name="&gt;&gt;toolStripSeparator2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;setRandomStartTimeToolStripMenuItem.Name" xml:space="preserve">
+    <value>setRandomStartTimeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;setRandomStartTimeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;setRandomEndTimeToolStripMenuItem.Name" xml:space="preserve">
+    <value>setRandomEndTimeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;setRandomEndTimeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

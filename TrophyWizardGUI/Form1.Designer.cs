@@ -35,15 +35,8 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.關閉ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.進階ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.瞬間白金ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.清除獎杯ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.setRandomStartTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setRandomEndTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.重新整理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.consoleComboBoxSelection = new System.Windows.Forms.ToolStripComboBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -61,6 +54,12 @@
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
+            this.瞬間白金ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清除獎杯ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.setRandomStartTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setRandomEndTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +83,6 @@
             this.進階ToolStripMenuItem,
             this.重新整理ToolStripMenuItem,
             this.toolStripComboBox2,
-            this.toolStripComboBox1,
             this.consoleComboBoxSelection});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
@@ -131,50 +129,8 @@
             // 
             // 進階ToolStripMenuItem
             // 
-            this.進階ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.瞬間白金ToolStripMenuItem,
-            this.清除獎杯ToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.toolStripSeparator2,
-            this.setRandomStartTimeToolStripMenuItem,
-            this.setRandomEndTimeToolStripMenuItem});
             resources.ApplyResources(this.進階ToolStripMenuItem, "進階ToolStripMenuItem");
             this.進階ToolStripMenuItem.Name = "進階ToolStripMenuItem";
-            // 
-            // 瞬間白金ToolStripMenuItem
-            // 
-            this.瞬間白金ToolStripMenuItem.Name = "瞬間白金ToolStripMenuItem";
-            resources.ApplyResources(this.瞬間白金ToolStripMenuItem, "瞬間白金ToolStripMenuItem");
-            this.瞬間白金ToolStripMenuItem.Click += new System.EventHandler(this.瞬間白金ToolStripMenuItem_Click);
-            // 
-            // 清除獎杯ToolStripMenuItem
-            // 
-            this.清除獎杯ToolStripMenuItem.Name = "清除獎杯ToolStripMenuItem";
-            resources.ApplyResources(this.清除獎杯ToolStripMenuItem, "清除獎杯ToolStripMenuItem");
-            this.清除獎杯ToolStripMenuItem.Click += new System.EventHandler(this.清除獎杯ToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // setRandomStartTimeToolStripMenuItem
-            // 
-            this.setRandomStartTimeToolStripMenuItem.Name = "setRandomStartTimeToolStripMenuItem";
-            resources.ApplyResources(this.setRandomStartTimeToolStripMenuItem, "setRandomStartTimeToolStripMenuItem");
-            this.setRandomStartTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomStartTimeToolStripMenuItem_Click);
-            // 
-            // setRandomEndTimeToolStripMenuItem
-            // 
-            this.setRandomEndTimeToolStripMenuItem.Name = "setRandomEndTimeToolStripMenuItem";
-            resources.ApplyResources(this.setRandomEndTimeToolStripMenuItem, "setRandomEndTimeToolStripMenuItem");
-            this.setRandomEndTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomEndTimeToolStripMenuItem_Click);
             // 
             // 重新整理ToolStripMenuItem
             // 
@@ -186,15 +142,6 @@
             // 
             this.toolStripComboBox2.Name = "toolStripComboBox2";
             resources.ApplyResources(this.toolStripComboBox2, "toolStripComboBox2");
-            // 
-            // toolStripComboBox1
-            // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
-            resources.GetString("toolStripComboBox1.Items"),
-            resources.GetString("toolStripComboBox1.Items1")});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            resources.ApplyResources(this.toolStripComboBox1, "toolStripComboBox1");
-            this.toolStripComboBox1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBox1_SelectedIndexChanged);
             // 
             // consoleComboBoxSelection
             // 
@@ -263,35 +210,78 @@
             // 
             // columnHeader1
             // 
+            this.columnHeader1.Name = "columnHeader1";
             resources.ApplyResources(this.columnHeader1, "columnHeader1");
             // 
             // columnHeader2
             // 
+            this.columnHeader2.Name = "columnHeader2";
             resources.ApplyResources(this.columnHeader2, "columnHeader2");
             // 
             // columnHeader3
             // 
+            this.columnHeader3.Name = "columnHeader3";
             resources.ApplyResources(this.columnHeader3, "columnHeader3");
             // 
             // columnHeader4
             // 
+            this.columnHeader4.Name = "columnHeader4";
             resources.ApplyResources(this.columnHeader4, "columnHeader4");
             // 
             // columnHeader5
             // 
+            this.columnHeader5.Name = "columnHeader5";
             resources.ApplyResources(this.columnHeader5, "columnHeader5");
             // 
             // columnHeader7
             // 
+            this.columnHeader7.Name = "columnHeader7";
             resources.ApplyResources(this.columnHeader7, "columnHeader7");
             // 
             // columnHeader6
             // 
+            this.columnHeader6.Name = "columnHeader6";
             resources.ApplyResources(this.columnHeader6, "columnHeader6");
             // 
             // columnHeader8
             // 
+            this.columnHeader8.Name = "columnHeader8";
             resources.ApplyResources(this.columnHeader8, "columnHeader8");
+            // 
+            // 瞬間白金ToolStripMenuItem
+            // 
+            this.瞬間白金ToolStripMenuItem.Name = "瞬間白金ToolStripMenuItem";
+            resources.ApplyResources(this.瞬間白金ToolStripMenuItem, "瞬間白金ToolStripMenuItem");
+            this.瞬間白金ToolStripMenuItem.Click += new System.EventHandler(this.瞬間白金ToolStripMenuItem_Click);
+            // 
+            // 清除獎杯ToolStripMenuItem
+            // 
+            this.清除獎杯ToolStripMenuItem.Name = "清除獎杯ToolStripMenuItem";
+            resources.ApplyResources(this.清除獎杯ToolStripMenuItem, "清除獎杯ToolStripMenuItem");
+            this.清除獎杯ToolStripMenuItem.Click += new System.EventHandler(this.清除獎杯ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // setRandomStartTimeToolStripMenuItem
+            // 
+            this.setRandomStartTimeToolStripMenuItem.Name = "setRandomStartTimeToolStripMenuItem";
+            resources.ApplyResources(this.setRandomStartTimeToolStripMenuItem, "setRandomStartTimeToolStripMenuItem");
+            this.setRandomStartTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomStartTimeToolStripMenuItem_Click);
+            // 
+            // setRandomEndTimeToolStripMenuItem
+            // 
+            this.setRandomEndTimeToolStripMenuItem.Name = "setRandomEndTimeToolStripMenuItem";
+            resources.ApplyResources(this.setRandomEndTimeToolStripMenuItem, "setRandomEndTimeToolStripMenuItem");
+            this.setRandomEndTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomEndTimeToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -347,16 +337,15 @@
         private System.Windows.Forms.ToolStripMenuItem 重新整理ToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ToolStripMenuItem 關閉檔案CToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 瞬間白金ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 清除獎杯ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripMenuItem setRandomStartTimeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem setRandomEndTimeToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
         private System.Windows.Forms.ToolStripComboBox consoleComboBoxSelection;
+        private System.Windows.Forms.ToolStripMenuItem 瞬間白金ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 清除獎杯ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem setRandomStartTimeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setRandomEndTimeToolStripMenuItem;
     }
 }
 

@@ -13,7 +13,7 @@ namespace TrophyParser.Models
         public string Detail { get;}
         public int Gid { get;}
         public TrophyInfo TrophyInfo { get; set; }
-        public bool IsUnlock{ get => TrophyInfo == null || TrophyInfo.Time.HasValue; }
+        public bool IsUnlock{ get => TrophyInfo == null || TrophyInfo.IsUnlock; }
         public Trophy(int id, string hidden, string ttype, int pid, string name, string detail, int gid) 
         {
             Id = id;

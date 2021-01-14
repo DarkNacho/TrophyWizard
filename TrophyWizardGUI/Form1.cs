@@ -40,9 +40,9 @@ namespace PS3TrophyIsGood
             //Thread.CurrentThread.CurrentCulture = curinfo;
             //Thread.CurrentThread.CurrentUICulture = curinfo;
             InitializeComponent();
-            toolStripComboBox1.SelectedIndexChanged -= toolStripComboBox1_SelectedIndexChanged;
+            //toolStripComboBox1.SelectedIndexChanged -= toolStripComboBox1_SelectedIndexChanged;
             //toolStripComboBox1.SelectedIndex = Properties.Settings.Default.Language;
-            toolStripComboBox1.SelectedIndexChanged += toolStripComboBox1_SelectedIndexChanged;
+            //toolStripComboBox1.SelectedIndexChanged += toolStripComboBox1_SelectedIndexChanged;
             Directory.CreateDirectory("profiles");
             var profiles = new DirectoryInfo("profiles").GetFiles("*.sfo").Select(p => p.Name).ToArray();
             toolStripComboBox2.Items.Add("Default Profile");
@@ -73,7 +73,8 @@ namespace PS3TrophyIsGood
             EmptyAllCompoment();
             listViewEx1.BeginUpdate();
             for (int i = 0; i < unlocker.Count; i++) {
-                listViewEx1.LargeImageList.Images.Add("", Image.FromFile(path + @"\TROP" + string.Format("{0:000}", unlocker[i].Id) + ".PNG"));
+                if(consoleComboBoxSelection.SelectedIndex == 0) listViewEx1.LargeImageList.Images.Add("", Image.FromFile(path + @"\TROP" + string.Format("{0:000}", unlocker[i].Id) + ".PNG"));
+                else listViewEx1.LargeImageList.Images.Add("", Image.FromFile(path + @"\ICON0.PNG"));
                 ListViewItem lvi = new ListViewItem();
                 lvi.ImageIndex = i; // 在這裡imageid其實等於trophy ID   ex 白金0號, 1...
                 lvi.Text = unlocker[i].Name;
@@ -81,8 +82,8 @@ namespace PS3TrophyIsGood
                 lvi.SubItems.Add(unlocker[i].Type);
                 lvi.SubItems.Add(unlocker[i].Hidden);
                 lvi.SubItems.Add((unlocker[i].TrophyInfo.IsUnlock) ? "Yes": "No");
-                lvi.SubItems.Add((unlocker[i].TrophyInfo.Time.HasValue && unlocker[i].TrophyInfo.IsSync) ? "Yes": "No");
-                if (unlocker[i].TrophyInfo.Time.HasValue) {
+                lvi.SubItems.Add((unlocker[i].IsUnlock && unlocker[i].TrophyInfo.IsSync) ? "Yes": "No");
+                if (unlocker[i].IsUnlock) {
                     lvi.SubItems.Add(unlocker[i].TrophyInfo.Time.Value.ToString("yyyy/M/dd  HH:mm:ss"));
                     if (unlocker[i].TrophyInfo.IsSync) lvi.BackColor = Color.LightPink;
                 } else {
@@ -121,23 +122,23 @@ namespace PS3TrophyIsGood
                 switch (unlocker[i].Type[0]) {
                     case 'P':
                         totalGrade += 180;
-                        getGrade += (unlocker[i].TrophyInfo.Time.HasValue) ? 180 : 0;
+                        getGrade += (unlocker[i].IsUnlock) ? 180 : 0;
                         break;
                     case 'G':
                         totalGrade += 90;
-                        getGrade += (unlocker[i].TrophyInfo.Time.HasValue) ? 90 : 0;
+                        getGrade += (unlocker[i].IsUnlock) ? 90 : 0;
                         break;
                     case 'S':
                         totalGrade += 30;
-                        getGrade += (unlocker[i].TrophyInfo.Time.HasValue) ? 30 : 0;
+                        getGrade += (unlocker[i].IsUnlock) ? 30 : 0;
                         break;
                     case 'B':
                         totalGrade += 15;
-                        getGrade += (unlocker[i].TrophyInfo.Time.HasValue) ? 15 : 0;
+                        getGrade += (unlocker[i].IsUnlock) ? 15 : 0;
                         break;
                 }
 
-                if (unlocker[i].TrophyInfo.Time.HasValue) isGetTrophyNumber++;
+                if (unlocker[i].IsUnlock) isGetTrophyNumber++;
             }
             progressBar1.Maximum = totalGrade;
             progressBar1.Value = getGrade;
@@ -148,7 +149,7 @@ namespace PS3TrophyIsGood
 
         private void listViewEx1_SubItemClicked(object sender, ListViewEx.SubItemEventArgs e) {
             int trophyID = e.Item.ImageIndex;// 在這裡imageid其實等於trophy ID   ex 白金0號, 1...
-            if (e.SubItem == 6 && unlocker[trophyID].TrophyInfo.Time.HasValue && !unlocker[trophyID].TrophyInfo.IsSync) { // 已經取得且尚未同步的才可編輯
+            if (e.SubItem == 6 && unlocker[trophyID].IsUnlock && !unlocker[trophyID].TrophyInfo.IsSync) { // 已經取得且尚未同步的才可編輯
                 listViewEx1.StartEditing(dateTimePicker1, e.Item, e.SubItem);
             }
         }
@@ -191,9 +192,9 @@ namespace PS3TrophyIsGood
         private void listViewEx1_DoubleClick(object sender, EventArgs e) {
             int trophyID = ((ListView)sender).SelectedItems[0].ImageIndex;// 在這裡imageid其實等於trophy ID   ex 白金0號, 1...
             ListViewItem lvi = ((ListView)sender).SelectedItems[0];
-            if (unlocker[trophyID].TrophyInfo.Time.HasValue && unlocker[trophyID].TrophyInfo.IsSync) { // 尚未同步的才可編輯
+            if (unlocker[trophyID].IsUnlock && unlocker[trophyID].TrophyInfo.IsSync) { // 尚未同步的才可編輯
                 MessageBox.Show("Sync trophy can't be edit");
-            } else if (unlocker[trophyID].TrophyInfo.Time.HasValue)
+            } else if (unlocker[trophyID].IsUnlock)
             { // 已經取得的獎杯，刪除之
                 if (MessageBox.Show("Delete trophy", "Are you sure you want to delete the trophy?", MessageBoxButtons.YesNo) == DialogResult.Yes) {
                     //tpsn.DeleteTrophyByID(trophyID);
@@ -238,7 +239,7 @@ namespace PS3TrophyIsGood
                     CloseFile();
                 }
                 path = path_in;
-                Utility.decryptTrophy(path);
+                //if(consoleComboBoxSelection.SelectedIndex == 0) Utility.decryptTrophy(path);
 
                 if (consoleComboBoxSelection.SelectedIndex == 0) unlocker = new PS3Unlocker(path);
                 else unlocker = new VitaUnlocker(path);
@@ -257,7 +258,7 @@ namespace PS3TrophyIsGood
                 //tpsn = null;
                 //tusr = null;
                 GC.Collect();
-                Utility.encryptTrophy(path, toolStripComboBox2.Text);
+                //if (consoleComboBoxSelection.SelectedIndex == 0) Utility.encryptTrophy(path, toolStripComboBox2.Text);
                 Console.WriteLine(ex.StackTrace);
                 MessageBox.Show("Open Failed:" + ex.Message);
             }
@@ -281,7 +282,7 @@ namespace PS3TrophyIsGood
             重新整理ToolStripMenuItem.Enabled = false;
             進階ToolStripMenuItem.Enabled = false;
             if (isOpen) {
-                Utility.encryptTrophy(path,toolStripComboBox2.Text);
+                //if(consoleComboBoxSelection.SelectedIndex ==0) Utility.encryptTrophy(path,toolStripComboBox2.Text);
                 isOpen = false;
             }
             return true;
@@ -371,7 +372,7 @@ namespace PS3TrophyIsGood
                     for (int i = 0; i < unlocker.Count; ++i)
                     {
 
-                        if (!unlocker[i].TrophyInfo.Time.HasValue && _times[i] != 0)
+                        if (!unlocker[i].IsUnlock && _times[i] != 0)
                         {
                             //var time = _times[i].TimeStampToDateTime();
                             unlocker.UnlockTrophy(i, _times[i].TimeStampToDateTime());
