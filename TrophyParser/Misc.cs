@@ -74,6 +74,8 @@ namespace TrophyParser
         public static int ToInt(this string data, int b)
             => Convert.ToInt32(data, b);
 
+
+
         /// <summary>
         /// Convert a string in hex format to byte array
         /// </summary>

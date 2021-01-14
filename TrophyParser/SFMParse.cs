@@ -48,7 +48,17 @@ namespace TrophyParser
             reader.Close();
             return trophies;
         }
-
-        public abstract void PrintState();
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(Header.trophyconf_version);
+            sb.AppendLine(Header.npcommid);
+            sb.AppendLine(Header.trophyset_version);
+            sb.AppendLine(Header.parental_level);
+            sb.AppendLine(Header.title_name);
+            sb.AppendLine(Header.title_detail);
+            sb.AppendLine();
+            return sb.ToString();
+        }
     }
 }

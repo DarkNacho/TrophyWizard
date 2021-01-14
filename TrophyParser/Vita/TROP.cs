@@ -34,16 +34,5 @@ namespace TrophyParser.Vita
                 throw new Exception("Cannot Open TROPCONF.SFM.");
             }
         }
-
-        public override void PrintState()
-        {
-            Console.WriteLine(Header.trophyconf_version);
-            Console.WriteLine(Header.npcommid);
-            Console.WriteLine(Header.trophyset_version);
-            Console.WriteLine(Header.parental_level);
-            Console.WriteLine(Header.title_name);
-            Console.WriteLine(Header.title_detail);
-            foreach (Trophy t in _trophies) Console.WriteLine(t);
-        }
     }
 }

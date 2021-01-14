@@ -25,11 +25,10 @@ namespace TrophyParser.Vita
             {
                 var trophy = _trop[i];
                 trophy = _trop[i];
-                trophy.IsUnlock = _ttitle[i].IsUnlock | _tans[i].IsUnlock;
-                trophy.Time = _ttitle[i].Time;
+                if (_ttitle[i].IsUnlock | _tans[i].IsUnlock)
+                    trophy.TrophyInfo = _ttitle[i];
                 _trophies.Add(trophy);
             }
-            _trop.PrintState();
         }
         public void UnlockTrophy(int id, DateTime time)
         {

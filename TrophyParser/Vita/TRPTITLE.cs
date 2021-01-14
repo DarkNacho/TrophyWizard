@@ -46,6 +46,7 @@ namespace TrophyParser.Vita
         
         public TRPTITLE(string path)
         {
+            _path = path;
             _reader = new BinaryReader(new FileStream(path + "TRPTITLE.DAT", FileMode.Open));
             var block = Block;
             do
@@ -89,8 +90,7 @@ namespace TrophyParser.Vita
             {
                 var  data = new List<byte>();
                 data.Add((byte) (trophy.IsUnlock ? 0x01 : 0x00));
-                data.AddRange(new byte[]{0,0,trophy.Unknown});
-                data.AddRange(new byte[]{0,0,0,0,0});
+                data.AddRange(new byte[]{0,0,trophy.Unknown, 0, 0, 0, 0, 0 });
                 var time = BitConverter.GetBytes(trophy.Time.Ticks/10);
                 Array.Reverse(time);
                 data.AddRange(time);

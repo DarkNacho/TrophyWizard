@@ -10,7 +10,7 @@ namespace TrophyParser.Vita
     {
         private BinaryReader _reader;
         private BinaryWriter _writer;
-        private int _pointer = 0x377;
+        private const int _pointer = 0x377;
         public List<TrophyInfo> _trophies = new List<TrophyInfo>();
         private string _path;
         public TrophyInfo this[int index] => _trophies[index]; 
@@ -26,6 +26,7 @@ namespace TrophyParser.Vita
 
         public TRPTRANS(string path, int count)
         {
+            _path = path;
             _reader = new BinaryReader(new FileStream(path + "TRPTRANS.DAT", FileMode.Open));
             _reader.BaseStream.Position = _pointer;
             for (int i = 0; i < count; ++i)

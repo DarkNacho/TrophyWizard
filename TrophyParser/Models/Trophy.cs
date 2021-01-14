@@ -12,9 +12,7 @@ namespace TrophyParser.Models
         public string Name { get;}
         public string Detail { get;}
         public int Gid { get;}
-        public DateTime Time { get; set; }
-        public bool IsUnlock { get; set; }
-        public bool IsSync { get; set; }
+        public TrophyInfo TrophyInfo { get; set; } = null;
         public Trophy(int id, string hidden, string ttype, int pid, string name, string detail, int gid) 
         {
             Id = id;
@@ -24,8 +22,7 @@ namespace TrophyParser.Models
             Name = name;
             Detail = detail;
             Gid = gid;
-            IsUnlock = false;
-            IsSync = false;
+            TrophyInfo = null;
         }
         public override string ToString() 
         {
@@ -34,9 +31,7 @@ namespace TrophyParser.Models
             sb.AppendLine(Detail);
             sb.Append("Hidden: ").AppendLine(Hidden);
             sb.Append("Type: ").AppendLine(Type);
-            sb.Append("Unlock: ").AppendLine(IsUnlock ? "YES" : "NO");
-            sb.Append("Sync: ").AppendLine(IsSync ? "YES" : "NO");
-            sb.AppendLine(Time.ToString());
+            sb.Append(TrophyInfo != null ? TrophyInfo.ToString() : "NULL\n");
             return sb.ToString();
         }
     }
