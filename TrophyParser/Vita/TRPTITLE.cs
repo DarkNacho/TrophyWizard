@@ -43,26 +43,37 @@ namespace TrophyParser.Vita
             }
             
         }
-        
+
         public TRPTITLE(string path)
         {
+            if (path == null) throw new Exception("Path cannot be null!");
+            if (!path.EndsWith(@"\")) path += @"\";
+            if (!File.Exists(path + "TROP.SFM"))
+                throw new Exception("Cannot find TRPTITLE.DAT");
             _path = path;
-            _reader = new BinaryReader(new FileStream(path + "TRPTITLE.DAT", FileMode.Open));
-            var block = Block;
-            do
+            try
             {
-                var time = block.Skip(9).Take(8).ToArray();
-                Array.Reverse(time);
-                ulong t = BitConverter.ToUInt64(time);
-                _trophies.Add( new TrophyInfo
+                _reader = new BinaryReader(new FileStream(path + "TRPTITLE.DAT", FileMode.Open));
+                var block = Block;
+                do
                 {
-                    Time = new DateTime().AddMilliseconds(t/1000),
-                    Unknown = block[3]
-                    
-                });
-                block = Block;
-            } while (block.Any());
-            _reader.Close();
+                    var time = block.Skip(9).Take(8).ToArray();
+                    Array.Reverse(time);
+                    ulong t = BitConverter.ToUInt64(time);
+                    _trophies.Add(new TrophyInfo
+                    {
+                        Time = new DateTime().AddMilliseconds(t / 1000),
+                        Unknown = block[3]
+
+                    });
+                    block = Block;
+                } while (block.Any());
+                _reader.Close();
+            }
+            catch (IOException)
+            {
+                throw new Exception("Fail in TRPTITLE.DAT");
+            }
         }
 
         public void PuTrophy(int id, DateTime time)

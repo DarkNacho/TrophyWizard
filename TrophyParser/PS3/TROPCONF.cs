@@ -25,6 +25,8 @@ namespace TrophyParser.PS3
         {
             FileStream reader = null;
             if (path == null) throw new Exception("Path cannot be null!");
+            if (!path.EndsWith(@"\"))
+                path += @"\";
             if (!File.Exists(path + "TROPCONF.SFM"))
                 throw new Exception("Cannot find TROPCONF.SFM.");
             try

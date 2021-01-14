@@ -18,6 +18,7 @@ namespace TrophyParser.Vita
         {
             FileStream reader = null;
             if (path == null) throw new Exception("Path cannot be null!");
+            if (!path.EndsWith(@"\")) path += @"\";
             if (!File.Exists(path + "TROP.SFM"))
                 throw new Exception("Cannot find TROP.SFM.");
             try

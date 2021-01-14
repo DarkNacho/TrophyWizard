@@ -3,6 +3,8 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <OutputType>Library</OutputType>
+        <Authors>Dark Nacho</Authors>
+        <RepositoryUrl>https://github.com/DarkNacho/TrophyWizard.git</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>
