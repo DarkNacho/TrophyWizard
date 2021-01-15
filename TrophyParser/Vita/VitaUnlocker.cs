@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using TrophyParser.Models;
 
 namespace TrophyParser.Vita
@@ -56,5 +57,12 @@ namespace TrophyParser.Vita
         }
         public IEnumerator<Trophy> GetEnumerator() => _trophies.GetEnumerator();
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendLine(_trop.ToString());
+            _trophies.ForEach(t => sb.AppendLine(t.ToString()));
+            return sb.ToString();
+        }
     }
 }
