@@ -35,6 +35,12 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.關閉ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.進階ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.瞬間白金ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清除獎杯ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.setRandomStartTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setRandomEndTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.重新整理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
             this.consoleComboBoxSelection = new System.Windows.Forms.ToolStripComboBox();
@@ -54,12 +60,6 @@
             this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
-            this.瞬間白金ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.清除獎杯ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.setRandomStartTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setRandomEndTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,8 +129,50 @@
             // 
             // 進階ToolStripMenuItem
             // 
+            this.進階ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.瞬間白金ToolStripMenuItem,
+            this.清除獎杯ToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.toolStripSeparator2,
+            this.setRandomStartTimeToolStripMenuItem,
+            this.setRandomEndTimeToolStripMenuItem});
             resources.ApplyResources(this.進階ToolStripMenuItem, "進階ToolStripMenuItem");
             this.進階ToolStripMenuItem.Name = "進階ToolStripMenuItem";
+            // 
+            // 瞬間白金ToolStripMenuItem
+            // 
+            this.瞬間白金ToolStripMenuItem.Name = "瞬間白金ToolStripMenuItem";
+            resources.ApplyResources(this.瞬間白金ToolStripMenuItem, "瞬間白金ToolStripMenuItem");
+            this.瞬間白金ToolStripMenuItem.Click += new System.EventHandler(this.瞬間白金ToolStripMenuItem_Click);
+            // 
+            // 清除獎杯ToolStripMenuItem
+            // 
+            this.清除獎杯ToolStripMenuItem.Name = "清除獎杯ToolStripMenuItem";
+            resources.ApplyResources(this.清除獎杯ToolStripMenuItem, "清除獎杯ToolStripMenuItem");
+            this.清除獎杯ToolStripMenuItem.Click += new System.EventHandler(this.清除獎杯ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
+            // 
+            // setRandomStartTimeToolStripMenuItem
+            // 
+            this.setRandomStartTimeToolStripMenuItem.Name = "setRandomStartTimeToolStripMenuItem";
+            resources.ApplyResources(this.setRandomStartTimeToolStripMenuItem, "setRandomStartTimeToolStripMenuItem");
+            this.setRandomStartTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomStartTimeToolStripMenuItem_Click);
+            // 
+            // setRandomEndTimeToolStripMenuItem
+            // 
+            this.setRandomEndTimeToolStripMenuItem.Name = "setRandomEndTimeToolStripMenuItem";
+            resources.ApplyResources(this.setRandomEndTimeToolStripMenuItem, "setRandomEndTimeToolStripMenuItem");
+            this.setRandomEndTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomEndTimeToolStripMenuItem_Click);
             // 
             // 重新整理ToolStripMenuItem
             // 
@@ -247,41 +289,6 @@
             // 
             this.columnHeader8.Name = "columnHeader8";
             resources.ApplyResources(this.columnHeader8, "columnHeader8");
-            // 
-            // 瞬間白金ToolStripMenuItem
-            // 
-            this.瞬間白金ToolStripMenuItem.Name = "瞬間白金ToolStripMenuItem";
-            resources.ApplyResources(this.瞬間白金ToolStripMenuItem, "瞬間白金ToolStripMenuItem");
-            this.瞬間白金ToolStripMenuItem.Click += new System.EventHandler(this.瞬間白金ToolStripMenuItem_Click);
-            // 
-            // 清除獎杯ToolStripMenuItem
-            // 
-            this.清除獎杯ToolStripMenuItem.Name = "清除獎杯ToolStripMenuItem";
-            resources.ApplyResources(this.清除獎杯ToolStripMenuItem, "清除獎杯ToolStripMenuItem");
-            this.清除獎杯ToolStripMenuItem.Click += new System.EventHandler(this.清除獎杯ToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            resources.ApplyResources(this.toolStripSeparator2, "toolStripSeparator2");
-            // 
-            // setRandomStartTimeToolStripMenuItem
-            // 
-            this.setRandomStartTimeToolStripMenuItem.Name = "setRandomStartTimeToolStripMenuItem";
-            resources.ApplyResources(this.setRandomStartTimeToolStripMenuItem, "setRandomStartTimeToolStripMenuItem");
-            this.setRandomStartTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomStartTimeToolStripMenuItem_Click);
-            // 
-            // setRandomEndTimeToolStripMenuItem
-            // 
-            this.setRandomEndTimeToolStripMenuItem.Name = "setRandomEndTimeToolStripMenuItem";
-            resources.ApplyResources(this.setRandomEndTimeToolStripMenuItem, "setRandomEndTimeToolStripMenuItem");
-            this.setRandomEndTimeToolStripMenuItem.Click += new System.EventHandler(this.setRandomEndTimeToolStripMenuItem_Click);
             // 
             // Form1
             // 
